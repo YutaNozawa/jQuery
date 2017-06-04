@@ -1,0 +1,1 @@
+JavaScriptを便利に扱うためのライブラリがjQuery
