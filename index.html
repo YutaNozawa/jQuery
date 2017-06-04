@@ -12,8 +12,17 @@
                 //メソッド: 処理
                 //メソッドチェーン メソッドをつなげて書く処理
 
+                //フィルター処理
+                //要素 > li:gt(数値) gtより大きい数値にのみ反映させる。
+                //要素 > li:eq(数値) eqと同じ数値にのみ反映させる
+                //要素 > li:odd 奇数の数値にのみ反映させる
+                //$("sub > li:contains('4')").css('color', 'red');
+                
                 // $("#sub").css('color', 'red');
-                $("p, .item").css('color', 'red');
+                //$("#sub > li:eq(2)").css('color', 'red');
+                //$("#sub > li:gt(2)").css('color', 'red');
+                // $("#sub > li:odd").css('color', 'red');
+                $("sub > li:contains('4')").css('color', 'red');
             });
     </script>
 </head>
