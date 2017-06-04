@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <titlle></title>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
     <script>
@@ -12,13 +11,29 @@
                 //セレクタ: 処理対象となるDOM要素を指定する記法(DocumentObjectModel)
                 //メソッド: 処理
                 //メソッドチェーン メソッドをつなげて書く処理
-                //p要素の、文字色を
-                $('p').css('color', 'red').hide('slow');
+
+                // $("#sub").css('color', 'red');
+                $("p, .item").css('color', 'red');
             });
-        });
     </script>
 </head>
 <body>
     <p>jQueryの練習</p>
+
+    <ul id="main">
+        <li>0</li>
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li>
+            3
+            <ul id="sub">
+                <li>3-0</li>
+                <li>3-1</li>
+                <li class="item">3-2</li>
+                <li class="item">3-3</li>
+                <li>3-4</li>
+            </ul>
+        </li>
+    </ul>
 </body>
 </html>
