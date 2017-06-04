@@ -17,12 +17,21 @@
                 //要素 > li:eq(数値) eqと同じ数値にのみ反映させる
                 //要素 > li:odd 奇数の数値にのみ反映させる
                 //$("sub > li:contains('4')").css('color', 'red');
-                
+
                 // $("#sub").css('color', 'red');
                 //$("#sub > li:eq(2)").css('color', 'red');
                 //$("#sub > li:gt(2)").css('color', 'red');
                 // $("#sub > li:odd").css('color', 'red');
                 $("sub > li:contains('4')").css('color', 'red');
+
+                //メソッドを使ったDOM要素の指定 (subの親要素に対してcssを適用させる)
+               // $('#sub').parent().css('color', 'red');
+
+                //subの子要素全てを赤くしたいとき
+                //$("#sub").children().css('color', 'red');
+
+                //そのこの要素と同じ階層の2以外の全ての要素を赤くしたい場合
+                $("#sub > li:eq(2)").siblings().css('color', 'red');
             });
     </script>
 </head>
