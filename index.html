@@ -2,7 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <titlle>jQueryの練習</title>
+    <titlle></title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script>
+        //$(document).ready(function() {
+        //全体の要素が読み込まれてから行う処理
+            $(function () {
+                //セレクタ: 処理対象となるDOM要素を指定する記法(DocumentObjectModel)
+                //メソッド: 処理
+                //メソッドチェーン メソッドをつなげて書く処理
+                //p要素の、文字色を
+                $('p').css('color', 'red').hide('slow');
+            });
+        });
+    </script>
 </head>
 <body>
     <p>jQueryの練習</p>
