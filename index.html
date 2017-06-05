@@ -22,7 +22,7 @@
                 //$("#sub > li:eq(2)").css('color', 'red');
                 //$("#sub > li:gt(2)").css('color', 'red');
                 // $("#sub > li:odd").css('color', 'red');
-                $("sub > li:contains('4')").css('color', 'red');
+               // $("sub > li:contains('4')").css('color', 'red');
 
                 //メソッドを使ったDOM要素の指定 (subの親要素に対してcssを適用させる)
                // $('#sub').parent().css('color', 'red');
@@ -31,12 +31,27 @@
                 //$("#sub").children().css('color', 'red');
 
                 //そのこの要素と同じ階層の2以外の全ての要素を赤くしたい場合
-                $("#sub > li:eq(2)").siblings().css('color', 'red');
+                //$("#sub > li:eq(2)").siblings().css('color', 'red');
+
+                //セレクタ.メソッド
+                //属性セレクタ
+                //属性の値と等しければ=
+                //属性の値と等しくなければ!=
+                //属性の値を含む*=
+                //属性の値の終わりが～$=
+                //$('a[href="http://google.com"]').css('background', 'red');
+                //$('a[href!="http://google.com"]').css('background', 'red');
+                $('a[href$=".com"]').css('background', 'red');
             });
     </script>
 </head>
 <body>
     <p>jQueryの練習</p>
+
+    <p><a href="http://google.com">Google</a></p>
+    <p><a href="http://yahoo.co.jp">Yahoo</a></p>
+    <p><a href="http://dotinstall.com">Dotinstall</a></p>
+
 
     <ul id="main">
         <li>0</li>
