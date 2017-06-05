@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
+    <style>
+        .myStyle {
+            border: 5px solid green;
+            font-size: 48px;
+        }
+    </style>
+
     <script>
         //$(document).ready(function() {
         //全体の要素が読み込まれてから行う処理
@@ -41,7 +48,18 @@
                 //属性の値の終わりが～$=
                 //$('a[href="http://google.com"]').css('background', 'red');
                 //$('a[href!="http://google.com"]').css('background', 'red');
-                $('a[href$=".com"]').css('background', 'red');
+                //$('a[href$=".com"]').css('background', 'red');
+
+                //セレクタ・メソッド
+                //.css 設定　値の取得もできる
+                //$('p').css('color', 'red').css('background', 'blue');
+
+                //現在設定されている色の情報を取得できる
+                //console.log($('p').css('color'));
+
+                //addClass removeClass
+                $('p').addClass('myStyle');
+
             });
     </script>
 </head>
