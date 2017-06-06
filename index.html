@@ -58,20 +58,46 @@
                 //console.log($('p').css('color'));
 
                 //addClass removeClass
-                $('p').addClass('myStyle');
+                // $('p').addClass('myStyle');
 
+                //attr、dataメソッドを使ってみよう
+
+                //属性の取得
+                //console.log($('a').attr('href', 'http://google.com'));
+
+                //data属性（dataの後につけた名前を使って、データを取得)
+               // console.log($('a').data('sitename'));
+
+                //タグの中身を操作してみよう
+                //pタグで囲んである0番目の要素の中身を変更
+                //$('p > p:eq(0)').text('just changed');
+
+                //HTML属性を付与、というか書き換え
+                //$('p').html('<a href="">click me</a>');
+
+                //console.log($('input').val());
+
+                $('input').val('hello again');
+
+                //p要素は残るが、中身のデータがきえる
+                $('p').empty();
+
+                //p要素と中身のデータも消える
+                $('p').remove();
             });
     </script>
 </head>
 <body>
     <p>jQueryの練習</p>
 
-    <p><a href="http://google.com">Google</a></p>
-    <p><a href="http://yahoo.co.jp">Yahoo</a></p>
-    <p><a href="http://dotinstall.com">Dotinstall</a></p>
+    <p><a href="http://google.com" data-sitename="google">Google</a></p>
+
+    <input type="text" value="hello">
+    <!--<p><a href="http://yahoo.co.jp">Yahoo</a></p>-->
+    <!--<p><a href="http://dotinstall.com">Dotinstall</a></p>-->
 
 
-    <ul id="main">
+    <!--<ul id="main">
         <li>0</li>
         <li class="item">1</li>
         <li class="item">2</li>
@@ -85,6 +111,6 @@
                 <li>3-4</li>
             </ul>
         </li>
-    </ul>
+    </ul>-->
 </body>
 </html>
