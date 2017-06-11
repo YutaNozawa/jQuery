@@ -19,6 +19,15 @@
                 //メソッド: 処理
                 //メソッドチェーン メソッドをつなげて書く処理
 
+                //セレクタ、メソッド
+                // #
+                // > 直下の要素
+                // それ以下の要素
+                // , 複数の要素
+                // + 隣接する要素
+
+
+
                 //フィルター処理
                 //要素 > li:gt(数値) gtより大きい数値にのみ反映させる。
                 //要素 > li:eq(数値) eqと同じ数値にのみ反映させる
@@ -75,24 +84,152 @@
                 //HTML属性を付与、というか書き換え
                 //$('p').html('<a href="">click me</a>');
 
-                //console.log($('input').val());
+                ////console.log($('input').val());
 
-                $('input').val('hello again');
+                //$('input').val('hello again');
 
                 //p要素は残るが、中身のデータがきえる
-                $('p').empty();
+                //$('p').empty();
 
                 //p要素と中身のデータも消える
-                $('p').remove();
+                //$('p').remove();
+
+                var li = $('<li>').text('just added');
+
+                //要素の手前に追加
+               // $('ul').prepend(li);
+
+                //要素の最後に追加
+                // $('ul').append(li);
+
+                //その要素の手前に追加したい場合
+                //$('ul > li:eq(1)').before(li);
+
+                //要素の後に追加したい場合
+                //$('ul > li:eq(1)').after(li);
+
+                //hide, show
+
+                //ゆっくり縮小して消える
+                //$('#box').hide('slow');
+
+                //ゆっくり縮小して消える（2秒ぐらい)?
+                //$('#box').hide(2000);
+
+                //縮小せずそのまま透明になって消える
+                //$('#box').fadeOut(800);
+                /*縮小して消える
+                $('#box').toggle(800);
+                $('#box').toggle(800);
+                $('#box').toggle(800);
+                $('#box').toggle(800);
+                */
+
+                //コールバック関数、fadeOutの処理が終わった後にこの処理が始まる
+                //内容はウィンドウのダイアログが出てきてダイアログにメッセージで
+                //hi!と表示が出る
+                //$('#box').fadeOut(800, function() {
+                //    alert('hi!');
+                //})
+
+                //click
+                //mouseover, mousemove, mouseout
+
+                //click　クリックしたときの処理
+                //mouseover　マウスが要素と重なったときの処理
+                //mousemove マウスが要素と重なっているときにに起こり続ける処理
+                //mouseout マウスが要素から離れたときに起こる処理
+
+                //クリックしたときに要素の色が変わる
+                //$('#box').click(function() {
+                //    $('#box').css('background', 'blue');
+                //})
+
+                //マウスカーソルがその要素に重なったときに
+                //要素の色が変わる、逆はmouseout
+                //$('#box')
+                //        .mouseover(function() {
+                //    $(this).css('background', 'green');
+                //})
+                //        .mousemove(function(e) {
+                //    $(this).text(e.pageX);
+                //});
+
+                //マウスが重なっている間はfadeOutfadeInの処理を繰り返す
+                //$('#box').mousemove(function() {
+                //    $(this).fadeOut(500);
+                //    $(this).fadeIn(500);
+                    //$(this).toggle(500);
+                    //$(this).toggle(500);
+                //})
+
+                //$('input').val('good morning');
+                //$('a[href="http://google.com"]').html('http://yahoo.co.jp');
+
+                //focus, blur
+                //change
+
+               // $('#name')
+               //     //一回クリックしてその要素がfocusされたときに走る処理
+               //     .focus (function() {
+                //        $(this).css('background', 'red');
+                //     })
+                    //クリックした場所がfocusから外れているときに走る処理
+                //    .blur (function() {
+              //          $(this).css('background', 'white');
+               //     });
+
+
+                //要素に変更を加えるとcssに変更が加わる
+                //$('#members').change(function() {
+                //    $(this).css('background', 'blue');
+                //});
+
+                //$('#members').blur(function() {
+                 //   $(this).css('background', 'white');
+                //})
+
+//                $('button').click(function() {
+//                    var p = $('<p>').text('vanish!').addClass('vanish');
+//                    $(this).before(p);
+//                });
+//
+//                $('body').on('click', '.vanish', function() {
+//                   $(this).remove();
+//                });
+
+                //Ajaxを使えばページ内でサーバー通信をすることができる
+                //jQueryでやるには
+
+
+
             });
     </script>
 </head>
 <body>
     <p>jQueryの練習</p>
 
+    <button>Add Button</button>
+
     <p><a href="http://google.com" data-sitename="google">Google</a></p>
 
-    <input type="text" value="hello">
+    <input type="text" id="name">
+    <select id="members", name="members">
+        <option>nozawa</option>
+        <option>fukuchi</option>
+        <option>hayate</option>
+    </select>
+
+    <div id="box" style="width: 100px; height: 100px; background: red;">
+
+
+    </div>
+
+    <ul>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+    </ul>
     <!--<p><a href="http://yahoo.co.jp">Yahoo</a></p>-->
     <!--<p><a href="http://dotinstall.com">Dotinstall</a></p>-->
 
