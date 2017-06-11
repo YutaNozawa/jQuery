@@ -201,6 +201,22 @@
                 //Ajaxを使えばページ内でサーバー通信をすることができる
                 //jQueryでやるには
 
+                //サーバー側の情報を読み込む
+                //.load();
+
+                //非同期: 処理が終わる前に次の処理に移る
+                //loadという命令が非同期なので、more.htmlに書かれているmessageの
+                //cssは色が変わらない
+                $('button').click(function() {
+                    //処理が終わった後に実行するコールバック関数を使う
+                    //非同期なので、この処理がおわった後にこれを実行する
+                    //という手順をとりたい場合はコールバック関数を使う
+                    $('#result').load('more.html', function() {
+                        //読み込む前に実行されてしまう
+                        $('#message').css('color', 'red');
+                    });
+
+                })
 
 
             });
@@ -210,6 +226,9 @@
     <p>jQueryの練習</p>
 
     <button>Add Button</button>
+
+    <button>もっと読む</button>
+    <div id="result"></div>
 
     <p><a href="http://google.com" data-sitename="google">Google</a></p>
 
